@@ -41,7 +41,9 @@
   "main": "src/electron.js",
   "scripts": {
     "dev": "nf start",
+    "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
+    "electron": "electron .",
     "lint": "eslint . --ext .ts",
     "package": "electron-forge package",
     "make": "electron-forge make"
