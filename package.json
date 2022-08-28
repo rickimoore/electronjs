@@ -1,0 +1,115 @@
+{
+  "name": "electron-dash",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.65",
+    "@hookform/resolvers": "^2.9.7",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^28.1.7",
+    "@types/node": "^18.7.8",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "apollo-client": "^2.6.10",
+    "bootstrap-icons": "^1.9.1",
+    "chart.js": "^3.9.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "eslint": "^8.22.0",
+    "ethers": "^5.7.0",
+    "graphql": "^16.6.0",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-apollo-hooks": "^0.5.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.2",
+    "react-scripts": "5.0.1",
+    "recoil": "^0.7.5",
+    "swiper": "^8.3.2",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "use-debounce": "^8.0.3",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "main": "src/electron.js",
+  "scripts": {
+    "dev": "nf start",
+    "build": "react-scripts build",
+    "lint": "eslint . --ext .ts",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.65",
+    "@electron-forge/maker-deb": "^6.0.0-beta.65",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.65",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.65",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.65",
+    "@electron-forge/maker-zip": "^6.0.0-beta.65",
+    "@faker-js/faker": "^7.4.0",
+    "electron": "^20.0.3",
+    "foreman": "^3.0.1",
+    "postcss-loader": "^7.0.1",
+    "tailwindcss": "^3.1.8"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "dir": "./build"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_dash"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "format": "ULFO"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
